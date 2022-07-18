@@ -7,12 +7,15 @@ print(sys.argv)
 def add(a,b):
       return a+b
 #nombre_d'arg correcte
-#sinon l'affichage d'un erreur
-nombre_d'arg=len(sys.argv)-1
-if (nombre_d'arg <2):
-             print("Error detected")
-
-x=int( sys.argv[1] )
-y=int( sys.argv[2] )
+nombre_darg=len(sys.argv)-1   
+if (nombre_darg <2):
+             print("Veuillez fournir les 2 valeurs en arguement svp")
+             x=int(input("Veuillez inserer la valeur de x:"))
+             y=int(input("Veuillez inserer la valeur de y:"))
+elif (nombre_darg > 2):
+              print("Inserez seulement les 2 valeurs en arguement")
+else:
+	x=int( sys.argv[1] )
+	y=int( sys.argv[2] )
 
 print(add(x,y))
